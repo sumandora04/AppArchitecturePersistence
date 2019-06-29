@@ -35,7 +35,7 @@ interface SleepDatabaseDao{
     fun clear()
 
     @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC")
-    fun getAllNight():LiveData<List<SleepNight>> // Return live data list of sleep night.
+    fun getAllNights():LiveData<List<SleepNight>> // Return live data list of sleep night.
 
     //Get the recent night:
     @Query("SELECT * FROM daily_sleep_quality_table ORDER BY nightId DESC LIMIT 1")
